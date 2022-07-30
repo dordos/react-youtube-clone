@@ -1,0 +1,77 @@
+
+.header__container{
+  display: flex;
+  justify-content:space-between ;
+  height: 56px;
+  padding:0px 16px;
+
+  //background-color: red;
+
+  .menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .faBars{
+      width: 24px;
+      height: 24px;
+      padding: 8px;
+      svg{
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .faYoutube{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+      width: 90px;
+      height: 30px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+      span{
+        width: 60px;
+        height: 18px;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .search{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex:0 1 728px;
+    background-color: blue;
+
+     & > input{
+       width: 60%;
+      height: 24px;
+       border: 1px solid hsl(0, 0%, 18.82%);;
+       background-color:hsl(0, 0%, 7%);
+    }
+    .faMagnifyingGlass{
+      background-color: hsl(0, 0%, 18.82%);
+      height: 40px;
+      width: 64px;
+    }
+  }
+
+  .login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    & > div{
+      border:1px solid #3ea6ff;
+      color: #3ea6ff;
+    }
+  }
+
+}
+
