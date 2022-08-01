@@ -1,0 +1,24 @@
+.sideBar__container{
+  width: 240px;
+  height: 100%;
+}
+
+.menu__list{
+//background-color:black;
+padding: 12px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);;
+  .menu__item{
+    width: 240px;
+    height: 40px;
+    padding: 0px 24px;
+    svg{
+      width: 18px;
+      height: 18px;
+      margin-right: 24px;
+    }
+    span{
+      width: 144px;
+      height: 20px;
+    }
+  }
+}

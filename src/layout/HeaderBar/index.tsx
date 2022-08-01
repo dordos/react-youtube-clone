@@ -12,7 +12,7 @@ import "./style.scss";
 const HeaderBar = () => {
   const logoIcon = require("../../img/logo.png");
   return (
-    <div className="header__container">
+    <div className="headerBar__container">
       <div className="menu">
         <div className="faBars">
           <FontAwesomeIcon icon={faBars} />

@@ -1,12 +1,9 @@
 
-.header__container{
+.headerBar__container{
   display: flex;
   justify-content:space-between ;
   height: 56px;
   padding:0px 16px;
-
-  //background-color: red;
-
   .menu{
     display: flex;
     justify-content: center;
