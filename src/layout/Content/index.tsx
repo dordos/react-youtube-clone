@@ -1,7 +1,8 @@
 import React from "react";
 import "./style.scss";
+// import VideoItem from "../../components/VideoItem";
 
-const Content = () => {
+const Content = (props: any) => {
   return (
     <div className="content__container">
       <div className="content__group__list">
@@ -15,6 +16,13 @@ const Content = () => {
           <li>Tourist destinations</li>
           <li>Background music</li>
           <li>Dogs</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          {props.videos.map((video: any) => {
+            return <li>{video.snippet.title}</li>;
+          })}
         </ul>
       </div>
     </div>
