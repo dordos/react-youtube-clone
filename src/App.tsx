@@ -32,7 +32,7 @@ function App() {
       <HeaderBar />
       <div className="main__container">
         <Sidebar />
-        <Content videos={videos} />
+        <Content videoList={videos} />
       </div>
     </>
   );

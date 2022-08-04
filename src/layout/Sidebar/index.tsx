@@ -23,6 +23,7 @@ import {
   faCompass,
   faFlag,
   faCircleQuestion,
+  faUserCircle,
 } from "@fortawesome/free-regular-svg-icons";
 import {
   faPlaystation,
@@ -62,51 +63,76 @@ const Sidebar = () => {
         </div>
       </div>
 
-      <div className="menu__list">
-        <span>Sign in to like videos,</span>
-        <span>comment,and subscribe.</span>
+      <div className="menu__list menu__login">
+        <div>
+          <p>Sign in to like videos, comment,and subscribe.</p>
+        </div>
+        <div className="menu__login__box">
+          <FontAwesomeIcon icon={faUserCircle} />
+          <span>SIGN IN</span>
+        </div>
       </div>
 
-      <div className="menu__list">
-        <span>EXPLORE</span>
+      <div className="menu__list menu__explore">
+        <div className="menu__explore__title">EXPLORE</div>
         <div className="menu__item">
-          <FontAwesomeIcon icon={faMusic} />
+          <div className="explore__icon">
+            <FontAwesomeIcon icon={faMusic} />
+          </div>
           <span>Music</span>
         </div>
         <div className="menu__item">
-          <FontAwesomeIcon icon={faTrophy} />
+          <div className="explore__icon">
+            <FontAwesomeIcon icon={faTrophy} />
+          </div>
           <span>Sports</span>
         </div>
         <div className="menu__item">
-          <FontAwesomeIcon icon={faDice} />
+          <div className="explore__icon">
+            <FontAwesomeIcon icon={faDice} />
+          </div>
           <span>Gaming</span>
         </div>
         <div className="menu__item">
-          <FontAwesomeIcon icon={faClapperboard} />
+          <div className="explore__icon">
+            <FontAwesomeIcon icon={faClapperboard} />
+          </div>
           <span>Movies & Shows</span>
         </div>
         <div className="menu__item">
-          <FontAwesomeIcon icon={faFileLines} />
+          <div className="explore__icon">
+            <FontAwesomeIcon icon={faFileLines} />
+          </div>
           <span>News</span>
         </div>
         <div className="menu__item">
-          <FontAwesomeIcon icon={faPodcast} />
+          <div className="explore__icon">
+            <FontAwesomeIcon icon={faPodcast} />
+          </div>
           <span>Live</span>
         </div>
         <div className="menu__item">
-          <FontAwesomeIcon icon={faShirt} />
+          <div className="explore__icon">
+            <FontAwesomeIcon icon={faShirt} />
+          </div>
           <span>Fashion & Beauty</span>
         </div>
         <div className="menu__item">
-          <FontAwesomeIcon icon={faLightbulb} />
+          <div className="explore__icon">
+            <FontAwesomeIcon icon={faLightbulb} />
+          </div>
           <span>Learning</span>
         </div>
         <div className="menu__item">
-          <FontAwesomeIcon icon={faYoutube} />
+          <div className="explore__icon">
+            <FontAwesomeIcon icon={faYoutube} />
+          </div>
           <span>Spotlight</span>
         </div>
         <div className="menu__item">
-          <FontAwesomeIcon icon={faVrCardboard} />
+          <div className="explore__icon">
+            <FontAwesomeIcon icon={faVrCardboard} />
+          </div>
           <span>360°Video</span>
         </div>
       </div>
@@ -116,8 +142,8 @@ const Sidebar = () => {
           <span>Browse channels</span>
         </div>
       </div>
-      <div className="menu__list">
-        <span>MORE FROM YOUTUBE</span>
+      <div className="menu__list menu__moreFrom">
+        <div className="menu__moreFrom__title">MORE FROM YOUTUBE</div>
         <div className="menu__item">
           <FontAwesomeIcon icon={faYoutube} />
           <span>YouTube Premium</span>
@@ -149,16 +175,24 @@ const Sidebar = () => {
           <span>Send feedback</span>
         </div>
       </div>
-      <div className="menu__list">
-        <span>About press Copyright</span>
-        <span>contact us Creators</span>
-        <span>advertise Developers</span>
-        <span>terms Privacy Policy & Safety</span>
-        <span>How YouTube works</span>
-        <span>Test new Features</span>
-      </div>
-      <div className="menu__list">
-        <span>&copy;2022 Dordos</span>
+      <div className="menu__list menu__copyRight">
+        <p>
+          About Press Copyright
+          <br />
+          Contact us Creators
+          <br />
+          Advertise Developers
+        </p>
+        <p>
+          Terms Privacy Policy & Safety
+          <br />
+          How YouTube works
+          <br />
+          Test new features
+        </p>
+        <div className="menu__list menu__copyRight__list">
+          <span>&copy;2022 Dordos</span>
+        </div>
       </div>
     </div>
   );

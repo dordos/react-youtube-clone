@@ -35,7 +35,7 @@ const HeaderBar = () => {
         <div className="faEllipsisVertical">
           <FontAwesomeIcon icon={faEllipsisVertical} />
         </div>
-        <div>
+        <div className="loginBtn">
           <FontAwesomeIcon icon={faUserCircle} />
           <span>SIGN IN</span>
         </div>

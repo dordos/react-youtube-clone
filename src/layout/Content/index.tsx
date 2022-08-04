@@ -1,8 +1,8 @@
 import React from "react";
 import "./style.scss";
-// import VideoItem from "../../components/VideoItem";
+import VideoItem from "../../components/VideoItem";
 
-const Content = (props: any) => {
+const Content = ({ videoList }: any) => {
   return (
     <div className="content__container">
       <div className="content__group__list">
@@ -18,10 +18,10 @@ const Content = (props: any) => {
           <li>Dogs</li>
         </ul>
       </div>
-      <div>
+      <div className="content__videoList">
         <ul>
-          {props.videos.map((video: any) => {
-            return <li>{video.snippet.title}</li>;
+          {videoList.map((video: any) => {
+            return <VideoItem key={video.id} video={video} />;
           })}
         </ul>
       </div>
