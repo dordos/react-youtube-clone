@@ -1,18 +1,28 @@
-import React from "react";
+import React, { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
+  faEllipsisVertical,
   faMagnifyingGlass,
   faMicrophone,
-  faEllipsisVertical,
 } from "@fortawesome/free-solid-svg-icons";
 import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
 import "./style.scss";
 
-const HeaderBar = () => {
+const SearchBar = ({ onSearch }) => {
   const logoIcon = require("../../img/logo.png");
+  const inputRef = useRef();
+  const handleSearch = () => {
+    const value = inputRef.current.value;
+    onSearch(value);
+  };
+
+  const onClick = () => {
+    handleSearch();
+  };
+
   return (
-    <div className="headerBar__container">
+    <div className="searchBar__container">
       <div className="menu">
         <div className="faBars">
           <FontAwesomeIcon icon={faBars} />
@@ -23,10 +33,10 @@ const HeaderBar = () => {
         </div>
       </div>
       <div className="search">
-        <input type="text" />
-        <div className="faMagnifyingGlass">
+        <input ref={inputRef} type="text" placeholder="Search" />
+        <button className="faMagnifyingGlass" type="submit" onClick={onClick}>
           <FontAwesomeIcon icon={faMagnifyingGlass} />
-        </div>
+        </button>
         <div className="faMicrophone">
           <FontAwesomeIcon icon={faMicrophone} />
         </div>
@@ -44,4 +54,4 @@ const HeaderBar = () => {
   );
 };
 
-export default HeaderBar;
+export default SearchBar;

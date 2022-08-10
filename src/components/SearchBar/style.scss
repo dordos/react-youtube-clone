@@ -1,5 +1,5 @@
 
-.headerBar__container{
+.searchBar__container{
   background-color: #212121;
   display: flex;
   justify-content:space-between ;
@@ -50,16 +50,16 @@
     align-items: center;
     flex:0 1 728px;
 
-     & > input{
-       width: 60%;
+    & > input{
+      width: 60%;
       height: 30px;
-       caret-color: #eeffff;
-       color: #eeffff;
-       padding-left: 10px;
-       font-size: 18px;
-       outline: none;
-       border: 1px solid hsl(0, 0%, 18.82%);;
-       background-color:hsl(0, 0%, 7%);
+      caret-color: #eeffff;
+      color: #eeffff;
+      padding-left: 10px;
+      font-size: 18px;
+      outline: none;
+      border: 1px solid hsl(0, 0%, 18.82%);;
+      background-color:hsl(0, 0%, 7%);
     }
     .faMagnifyingGlass{
       display: flex;
@@ -70,6 +70,8 @@
       width: 34px;
       font-size: 20px;
       cursor: pointer;
+      border: 0px ;
+      color: #eeffff;
     }
     .faMicrophone{
       display: flex;
