@@ -13,7 +13,6 @@
 
 # API KEYs
 .env
-.gitignore
 
 # misc
 .DS_Store
