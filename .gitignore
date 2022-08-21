@@ -15,7 +15,7 @@
 .env
 /.env
 .gitignore
-README.md
+.idea
 # misc
 .DS_Store
 .env.local
