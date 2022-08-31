@@ -8,25 +8,25 @@ interface requestOptions {
   redirect?: RequestRedirect;
 }
 
-function App({ youtube }) {
+function App({ youtube }: any) {
   const [videos, setVideos] = useState([]);
-  // const [selectVideo, setSelectVideo] = useState(null);
+  // const [selectedVideo, setSelectedVideo] = useState(null);
 
   // const selectVideo = (video) => {
-  //   setSelectVideo(video);
+  //   setSelectedVideo(video);
+  //   console.log(setSelectedVideo(video));
   // };
 
-  const search = (query) => {
+  const search = (query: any) => {
     youtube
       .search(query) //
-      .then((videos) => setVideos(videos));
+      .then((videos: any) => setVideos(videos));
   };
 
   useEffect(() => {
-    const requestOptions: requestOptions = {
-      method: "GET",
-      redirect: "follow",
-    };
+    youtube
+      .mostPopular() //
+      .then((videos: any) => setVideos(videos));
   }, []);
 
   return (

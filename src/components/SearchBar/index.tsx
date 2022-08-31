@@ -9,9 +9,9 @@ import {
 import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
 import "./style.scss";
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ onSearch }: any) => {
   const logoIcon = require("../../img/logo.png");
-  const inputRef = useRef();
+  const inputRef = useRef<any>();
   const handleSearch = () => {
     const value = inputRef.current.value;
     onSearch(value);

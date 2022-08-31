@@ -3,6 +3,7 @@ import "./style.scss";
 import VideoItem from "../../components/VideoItem";
 
 const Content = ({ videoList }: any) => {
+  console.log("-> videoList", videoList);
   return (
     <div className="content__container">
       <div className="content__group__list">

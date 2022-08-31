@@ -1,14 +1,11 @@
-interface IYoutube {
-  key?: string;
+class Youtube {
+  key: string | undefined;
   getRequestOptions: {
-    method?: "GET";
-    redirect?: "follow";
+    method: "GET";
+    redirect: "follow";
   };
-  mostPopular: () => {};
-}
 
-class Youtube implements IYoutube {
-  constructor(key) {
+  constructor(key: string | undefined) {
     this.key = key;
     this.getRequestOptions = {
       method: "GET",
@@ -25,13 +22,16 @@ class Youtube implements IYoutube {
     return result_1.items;
   }
 
-  async search(query) {
+  async search(query: any) {
     const response = await fetch(
       `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=40&q=${query}&type=video&key=${this.key}`,
       this.getRequestOptions
     );
     const result_1 = await response.json();
-    return result_1.items.map((item) => ({ ...item, id: item.id.videoId }));
+    return result_1.items.map((item: any) => ({
+      ...item,
+      id: item.id.videoId,
+    }));
   }
 }
 
