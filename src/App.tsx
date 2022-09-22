@@ -3,10 +3,10 @@ import "./App.scss";
 import Sidebar from "./layout/Sidebar";
 import Content from "./layout/Content";
 import SearchBar from "./components/SearchBar";
-interface requestOptions {
-  method: string;
-  redirect?: RequestRedirect;
-}
+// interface requestOptions {
+//   method: string;
+//   redirect?: RequestRedirect;
+// }
 
 function App({ youtube }: any) {
   const [videos, setVideos] = useState([]);
